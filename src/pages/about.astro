@@ -2,6 +2,8 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Button from '@/components/Button.astro';
 import { SITE } from '@/site.config';
+import { Image } from 'astro:assets';
+import headshot from '@/assets/images/headshot.jpg'
 
 const tools = [
   'Verilog',
@@ -22,6 +24,8 @@ const tools = [
     <h1 class="font-display text-ink max-w-xl text-3xl font-medium sm:text-4xl">
       Bridging mechanical intuition with digital hardware.
     </h1>
+
+    <Image src={headshot} alt="Headshot of Hayden VanderWeele" width={560} class="mt-6 rounded-xl" />
 
     <div class="prose prose-sm sm:prose-base mt-8 max-w-xl">
       <p>

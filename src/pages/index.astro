@@ -4,7 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Button from '@/components/Button.astro';
 import WorkRow from '@/components/WorkRow.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
-import { SITE } from '@/site.config';
+import { SITE } from '@/site.config' 
 
 const allWork = await getCollection('work', ({ data }) => !data.draft);
 const sorted = [...allWork].sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -23,6 +23,7 @@ const selected = [...featured, ...rest].slice(0, 5);
     <h1 class="font-display text-ink max-w-2xl text-4xl leading-[1.1] font-medium sm:text-5xl">
       {SITE.tagline}
     </h1>
+
 
     <p class="max-w-2xl text-lg text-ink-soft">
   I am a rising junior Computer Engineering student at <strong>Northwestern University</strong> driven by a fascination with how systems work—from bare metal to the application layer. 
@@ -77,5 +78,15 @@ const selected = [...featured, ...rest].slice(0, 5);
     >
       {SITE.email}
     </a>
+<div class="mt-6">
+  <a
+    href="/Hayden_VanderWeele_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+  >
+    View / Download Resume (PDF)
+  </a>
+</div>
   </section>
 </BaseLayout>
