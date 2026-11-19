@@ -1,7 +1,8 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import { SITE } from '@/site.config';
+// Note: Check your site.config.ts to ensure the export name matches (it may be siteConfig instead of SITE)
+import { SITE } from '@/site.config'; 
 import '@/styles/global.css';
 import BaseHead from '@/components/BaseHead.astro';
 
@@ -12,12 +13,42 @@ interface Props {
 }
 
 const { title, description = SITE.description, image = '/og-image.png' } = Astro.props;
+
+// Generate canonical URL to prevent duplicate content penalties in search rankings
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
+
+// JSON-LD Person Schema for Google Rich Results
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hayden VanderWeele",
+  "jobTitle": "Computer Engineering Student",
+  "description": description,
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Northwestern University"
+  },
+  "url": canonicalURL.href,
+  "sameAs": [
+    "https://www.linkedin.com/in/hayden-vanderweele/", // TODO: Add this too  "https://github.com/yourusername"       
+  ],
+  "knowsAbout": [
+    "Hardware Engineering",
+    "Embedded Systems",
+    "Verilog",
+    "CNC Manufacturing",
+    "Systems Administration"
+  ]
+};
 ---
 
 <!doctype html>
-<html lang={SITE.locale}>
+<html lang={SITE.locale || 'en'}>
   <head>
     <BaseHead title={title} description={description} image={image} />
+    
+    {/* Inject SEO Schema */}
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdSchema)} />
   </head>
   <body id="top" class="bg-paper text-ink">
     <Header />

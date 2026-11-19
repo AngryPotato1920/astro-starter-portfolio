@@ -3,31 +3,45 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Button from '@/components/Button.astro';
 import { SITE } from '@/site.config';
 
-const tools = ['TypeScript', 'Astro', 'React', 'Figma', 'Tailwind CSS', 'Node.js'];
+const tools = [
+  'Verilog',
+  'SolidWorks',
+  'Siemens NX CAM',
+  'C++',
+  'Docker/Portainer',
+  'MATLAB',
+  'Proxmox VE',
+  'Linux'
+];
 ---
 
-<BaseLayout title="About" description={`A bit about ${SITE.name} and how they work.`}>
+<BaseLayout title="About" description={`A bit about ${SITE.name} and their engineering background.`}>
   <section class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:pt-24">
     <p class="text-ink-soft mb-6 font-mono text-xs tracking-[0.2em] uppercase">About</p>
 
     <h1 class="font-display text-ink max-w-xl text-3xl font-medium sm:text-4xl">
-      {SITE.role}.
+      Bridging mechanical intuition with digital hardware.
     </h1>
 
     <div class="prose prose-sm sm:prose-base mt-8 max-w-xl">
       <p>
-        I start most projects by trying to find the smallest version of the problem — the one
-        screen, one flow, or one fix that actually matters — and build that first, properly, before
-        expanding outward.
+        I am a Computer Engineering student at Northwestern University driven by a fascination with how systems work--from the bare metal to the application layerppl
       </p>
       <p>
-        That usually means fewer features than a kickoff deck promises, and more attention to the
-        parts people interact with constantly: load times, empty states, error messages, the things
-        that quietly decide whether software feels good to use.
+        My engineering philosphy is rooted in hands-on mechanics. The same troubleshooting mindset I use to 
+        machine an aluminum differential housing or tune a marine engine directly translates into 
+        diagonising timing bottlenecks in complex systems or optimizing ZFS pools in a 
+        Proxox cluser.
       </p>
       <p>
-        Outside of client and product work, I maintain a couple of small open-source tools and write
-        occasional notes on what I learn building them.
+        By combining a rigorous academic foundation in digital logic and embedded systems with a deep familiarity with the 
+        Linux development enviornment, I build robust, full-stack solutions. Whether I am routing physical brake lines on the Baja
+        car or configuring a remote VPN tunnel, I am passionate about bridging the gap between
+        hardware constraints and scalable software architectures.
+      </p>
+      <p>
+        When I am not in the machine shop or my homelab, I am likely working on something mechanical in my garage, going on a run or heading to the gym, 
+        or just stuck reading a really good book.
       </p>
     </div>
 

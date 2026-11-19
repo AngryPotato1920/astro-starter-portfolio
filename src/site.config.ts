@@ -1,17 +1,15 @@
 // Edit this file to re-label the entire site. Header, Footer, the homepage
 // and SEO defaults all read from here instead of hardcoding copy.
 export const SITE = {
-  name: 'John Doe',
-  role: 'Product design & frontend engineering',
-  email: 'johndoe@example.com',
-  tagline: 'I design and build interfaces that hold up under real use.',
+  name: 'Hayden VanderWeele',
+  role: 'Computer Engineering Student',
+  email: 'haydenvanderweele2029@u.northwestern.edu',
+  tagline: 'Computer Engineering student at Northwestern University building hardware, embedded systems, and scalable infrastructure',
   description:
-    'Portfolio of John Doe — product design and frontend engineering, with an emphasis on speed, clarity, and the details most people skip.',
-  status: 'Currently building at Studio Co · open to new work, Q3 2026',
+    'Portfolio of Hayden VanderWeele — mechanical design and embedded systems, with an emphasis full stack solutions and a detail-oriented mindset',
+  status: 'Currently studying at Northwestern University, open to internships Summer 2027',
   social: [
-    { label: 'GitHub', href: 'https://github.com/your-username' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-username' },
-    { label: 'X', href: 'https://x.com/your-username' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hayden-vanderweele/' },
   ],
   locale: 'en',
 } as const;
