@@ -78,15 +78,8 @@ const selected = [...featured, ...rest].slice(0, 5);
     >
       {SITE.email}
     </a>
-<div class="mt-6">
-  <a
-    href="/Hayden_VanderWeele_Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
-  >
-    View / Download Resume (PDF)
-  </a>
-</div>
+    <div class="mt-8 flex flex-wrap items-center gap-3">
+      <Button href="/Hayden_VanderWeele_Resume.pdf" variant="solid">Download Resume →</Button>
+    </div>
   </section>
 </BaseLayout>
